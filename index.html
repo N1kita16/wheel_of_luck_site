@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#10051d">
+  <meta name="description" content="Новогоднее Колесо Удачи — праздничный конкурс от Больнички | Палата #69.">
+  <title>Новогоднее Колесо Удачи — Палата #69</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="snow" aria-hidden="true"></div>
+  <header class="topbar">
+    <a class="brand" href="#home"><span class="brand-mark">✦</span><span>БОЛЬНИЧКА <i>|</i> ПАЛАТА #69</span></a>
+    <nav class="top-nav"><a class="top-link" href="#rules">Условия</a><a class="top-link" href="#wheel">Колесо <span>✦</span></a></nav>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="hero-glow"></div>
+      <div class="hero-copy">
+        <p class="eyebrow"><span></span> ЗИМНИЙ ИВЕНТ · 2026 <span></span></p>
+        <h1>Новогоднее<br><em>Колесо удачи</em></h1>
+        <p class="hero-sub">Пусть этот декабрь принесёт тебе не только снег, но и немного волшебства.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#event">Узнать об ивенте <span>↓</span></a>
+          <a class="button button-ghost" href="#rules">Правила участия</a>
+        </div>
+        <div class="date-strip">
+          <div><small>НАЧАЛО</small><strong>01 <i>декабря</i></strong></div>
+          <span class="date-divider">✧</span>
+          <div><small>ОКОНЧАНИЕ</small><strong>21 <i>декабря</i></strong></div>
+        </div>
+      </div>
+      <div class="poster-wrap">
+        <div class="poster-frame"><img src="assets/event-poster.png" alt="Постер конкурса «Новогоднее Колесо Удачи»"></div>
+        <div class="poster-caption"><span class="sparkle">✧</span> ТВОЙ ШАНС ПОЙМАТЬ УДАЧУ <span class="sparkle">✧</span></div>
+      </div>
+      <div class="hero-bottom">✦ <span>СНЕГ · ОГНИ · ПОДАРКИ · УДАЧА</span> ✦</div>
+    </section>
+
+    <section class="event-section" id="event">
+      <div class="section-heading">
+        <p class="eyebrow">01 / О СОБЫТИИ</p>
+        <h2>Время для <em>чуда</em></h2>
+        <p>Приготовили для участников праздничный конкурс с новогодней атмосферой. Присоединяйся и испытай свою удачу!</p>
+      </div>
+      <div class="event-card">
+        <div class="event-icon">☾</div>
+        <div><span class="card-label">ГЛАВНОЕ СОБЫТИЕ</span><h3>Колесо удачи</h3><p>Участвуй в конкурсе от сообщества «Больничка | Палата #69» и следи за подробностями на Discord-сервере.</p></div>
+        <div class="card-date"><small>ДАТЫ ПРОВЕДЕНИЯ</small><strong>01.12 — 21.12</strong><span>2026</span></div>
+      </div>
+    </section>
+
+    <section class="rules-section" id="rules">
+      <div class="section-heading">
+        <p class="eyebrow">02 / КАК ПРИНЯТЬ УЧАСТИЕ</p>
+        <h2>Условия <em>участия</em></h2>
+        <p>Всего несколько простых условий — и ты в игре.</p>
+      </div>
+      <div class="rules-grid">
+        <article class="rule-card"><div class="rule-number">01</div><div class="rule-icon">♛</div><h3>Будь с нами в League of Legends</h3><p>Добавь организаторов в друзья минимум за 2 недели до начала конкурса.</p></article>
+        <article class="rule-card"><div class="rule-number">02</div><div class="rule-icon">◉</div><h3>Вступи в Discord</h3><p>Находись на нашем Discord-сервере «Больничка | Палата #69» до начала ивента.</p></article>
+        <article class="rule-card"><div class="rule-number">03</div><div class="rule-icon">♙</div><h3>Один аккаунт</h3><p>От одного участника допускается только один аккаунт.</p></article>
+        <article class="rule-card"><div class="rule-number">04</div><div class="rule-icon">▦</div><h3>Регистрация</h3><p>Регистрация и все подробности будут опубликованы на сервере.</p></article>
+      </div>
+      <div class="notice"><span>✦</span><p><strong>Важно:</strong> актуальные инструкции, регистрация и объявления конкурса публикуются на Discord-сервере организаторов.</p></div>
+    </section>
+
+
+    <section class="wheel-section" id="wheel">
+      <div class="section-heading">
+        <p class="eyebrow">03 / ИСПЫТАЙ УДАЧУ</p>
+        <h2>Колесо <em>фортуны</em></h2>
+        <p>Нажми на кнопку, запусти вращение и узнай, какой сюрприз приготовила тебе удача.</p>
+      </div>
+      <div class="wheel-layout">
+        <div class="wheel-stage">
+          <div class="wheel-pointer" aria-hidden="true">▼</div>
+          <div class="wheel-outer">
+            <canvas id="fortuneWheel" width="700" height="700" aria-label="Колесо фортуны с восемью секторами"></canvas>
+            <div class="wheel-center"><span>✦</span><small>УДАЧА</small></div>
+          </div>
+          <div class="wheel-shadow"></div>
+        </div>
+        <div class="wheel-info">
+          <span class="card-label">ТВОЙ НОВОГОДНИЙ ШАНС</span>
+          <h3>Готов испытать<br><em>свою удачу?</em></h3>
+          <p>Добавляй участников в список — колесо случайным образом выберет одного из них.</p>
+          <div class="participants-panel">
+            <label class="participants-label" for="participantInput">УЧАСТНИКИ РОЗЫГРЫША</label>
+            <div class="participant-entry">
+              <input id="participantInput" class="participant-input" type="text" maxlength="32" placeholder="Введите имя участника" autocomplete="off">
+              <button class="participant-add" id="addParticipant" type="button">Добавить</button>
+            </div>
+            <p class="participants-count" id="participantsCount">Участников: 0</p>
+            <ul class="participants-list" id="participantsList" aria-live="polite">
+              <li class="participants-empty">Пока никого нет — добавь первого участника.</li>
+            </ul>
+          </div>
+          <button class="button button-primary spin-button" id="spinButton" type="button" disabled><span class="button-label">Добавь участников</span><span>✧</span></button>
+          <p class="wheel-hint" id="wheelHint" aria-live="polite">Нажми кнопку, чтобы начать вращение.</p>
+          <div class="wheel-footnote">Демонстрационный режим: результат генерируется в браузере и не является официальной регистрацией или розыгрышем призов.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section">
+      <div class="cta-stars">✧　✦　✧</div>
+      <p class="eyebrow">ТВОЯ УДАЧА УЖЕ ЖДЁТ</p>
+      <h2>Увидимся в <em>декабре</em></h2>
+      <p>Сохрани страницу, чтобы не потерять даты конкурса.</p>
+      <a class="button button-primary" href="#home">Вернуться наверх <span>↑</span></a>
+    </section>
+  </main>
+
+  <footer><a class="brand" href="#home"><span class="brand-mark">✦</span><span>ПАЛАТА #69</span></a><span>Сделано с зимним настроением <b>♥</b></span><span>© 2026</span></footer>
+  <script src="script.js"></script>
+</body>
+</html>
